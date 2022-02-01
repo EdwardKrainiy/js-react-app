@@ -6,4 +6,3 @@ npm test
 
 # uncomment for testing git-hooks
 # exit 0
-npm test

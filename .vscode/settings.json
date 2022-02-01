@@ -4,26 +4,13 @@
   "path-autocomplete.extensionOnImport": true,
   "path-autocomplete.excludedItems": {
     //todo read path-alias from tsconfig.json
-    "**/*.+(ts|js|jsx|tsx)": {
-      "when": "**"
-    }, // ignore js files because VSCode works fine with ones
-    "**/*.map": {
-      "when": "**"
-    }, // always ignore *.map files
-    "**/{.git,node_modules}": {
-      "when": "**"
-    }, // always ignore .git and node_modules folders
-    "**/*": {
-      "when": "**/*.+(less|css|scss|sass)"
-    } //exclude for css files because VSCode works fine with ones
+    "**/*.+(ts|js|jsx|tsx)": { "when": "**" }, // ignore js files because VSCode works fine with ones
+    "**/*.map": { "when": "**" }, // always ignore *.map files
+    "**/{.git,node_modules}": { "when": "**" }, // always ignore .git and node_modules folders
+    "**/*": { "when": "**/*.+(less|css|scss|sass)" } //exclude for css files because VSCode works fine with ones
   },
   "stylelint.enable": true,
-  "stylelint.validate": [
-    "css",
-    "scss",
-    "sass",
-    "postcss"
-  ],
+  "stylelint.validate": ["css", "scss", "sass", "postcss"],
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -40,12 +27,7 @@
     "source.fixAll.markdownlint": true,
     "source.fixAll.stylelint": true
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.formatOnSave": false,
   "editor.formatOnPaste": true,
   "[javascript]": {
