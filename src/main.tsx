@@ -12,6 +12,9 @@ class AppContainer extends Component {
       <StrictMode>
         <Router>
           <div>
+            <head>
+              <title>Hello world</title>
+            </head>
             <nav>
               <Link to="/helloworld">Hello world page</Link>
             </nav>
