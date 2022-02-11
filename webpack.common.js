@@ -36,7 +36,7 @@ module.exports = function (env, argv) {
       errorDetails: true,
     },
     // entryPoint for webpack; it can be object with key-value pairs for multibuild (https://webpack.js.org/concepts/entry-points/)
-    entry: path.resolve(srcPath, "main.tsx"),
+    entry: path.resolve(srcPath, "./main.tsx"),
 
     output: {
       path: destPath,

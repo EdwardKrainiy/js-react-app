@@ -24,7 +24,7 @@
   "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yegorich555/webpack-must-have.git"
+    "url": "git+https://github.com/EdwardKrainiy/js-react-app"
   },
   "keywords": [
     "React",
@@ -33,12 +33,8 @@
     "webpack-must-have",
     "mock"
   ],
-  "author": "Yegor.Golubchik",
+  "author": "Edvard.Krainiy",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Yegorich555/webpack-must-have/issues"
-  },
-  "homepage": "https://github.com/Yegorich555/webpack-must-have#readme",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
