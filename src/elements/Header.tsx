@@ -10,8 +10,8 @@ function Header() {
       <div className="header-text">
         <p>Sigma Games</p>
       </div>
-      <nav>
-        <NavLink to="/home" className={getProperActiveClass}>
+      <nav className="header-nav">
+        <NavLink to="/home" className={getProperActiveClass} tabIndex={0}>
           Home
         </NavLink>
         <NavLink to="/products" className={getProperActiveClass}>

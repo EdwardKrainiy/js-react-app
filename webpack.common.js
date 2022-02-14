@@ -101,7 +101,7 @@ module.exports = function (env, argv) {
         },
         // rule for images
         {
-          test: /\.(png|jpe?g|gif|webp)(\?.*)?$/, // optional: optimizing images via pngo etc.
+          test: /\.(jpe?g|png|gif|webp)(\?.*)?$/, // optional: optimizing images via pngo etc.
           type: "asset",
           generator: {
             filename: "images/[name][ext][query]", // [hash][ext][query]",

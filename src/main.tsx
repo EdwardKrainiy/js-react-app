@@ -1,11 +1,8 @@
-import { Component } from "react";
 import ReactDOM from "react-dom";
-import RoutesComponent from "src/components/routes/RoutesComponent";
+import RoutesComponent from "./components/routes/RoutesComponent";
 
-class Main extends Component {
-  render() {
-    return <RoutesComponent />;
-  }
+function Main() {
+  return <RoutesComponent />;
 }
 
 ReactDOM.render(<Main />, document.getElementById("app"));
