@@ -11,24 +11,36 @@ function Footer() {
   return (
     <div className="footer-div">
       <div className="icons-div">
-        <a href={ROUTES.ACTIVISION_PAGE}>
-          <img src={activisionLogo as string} alt="" className="image-class" />
-        </a>
-        <a href={ROUTES.NINTENDO_PAGE}>
-          <img src={nintendoLogo as string} alt="" className="image-class" />
-        </a>
-        <a href={ROUTES.UBISOFT_PAGE}>
-          <img src={ubisoftLogo as string} alt="" className="image-class" />
-        </a>
-        <a href={ROUTES.SONY_PAGE}>
-          <img src={sonyLogo as string} alt="" className="image-class" />
-        </a>
-        <a href={ROUTES.EA_PAGE} tabIndex={-1}>
-          <img src={eaLogo as string} alt="" className="image-class" />
-        </a>
-        <a href={ROUTES.MICROSOFT_PAGE}>
-          <img src={microsoftLogo as string} alt="" className="image-class" />
-        </a>
+        <div>
+          <a href={ROUTES.ACTIVISION_PAGE}>
+            <img src={activisionLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
+        <div>
+          <a href={ROUTES.NINTENDO_PAGE}>
+            <img src={nintendoLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
+        <div>
+          <a href={ROUTES.UBISOFT_PAGE}>
+            <img src={ubisoftLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
+        <div>
+          <a href={ROUTES.SONY_PAGE}>
+            <img src={sonyLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
+        <div>
+          <a href={ROUTES.EA_PAGE}>
+            <img src={eaLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
+        <div>
+          <a href={ROUTES.MICROSOFT_PAGE}>
+            <img src={microsoftLogo as string} alt="" className="image-class" />
+          </a>
+        </div>
       </div>
       <div className="links-div">
         <div className="links-div-text">

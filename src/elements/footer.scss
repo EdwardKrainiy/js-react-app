@@ -11,11 +11,10 @@
 
 .image-class {
   margin-left: 5vw;
-  display: flex;
-  align-items: center;
   width: 3.5vw;
   height: auto;
   transition: transform 0.1s;
+  display: block;
 }
 
 .image-class:hover {
