@@ -4,7 +4,7 @@ import RoutesComponent from "./components/routes/RoutesComponent";
 
 class Main extends Component {
   componentDidCatch(error: Error, info: React.ErrorInfo) {
-    alert(`Error ${error.name} was catched.`);
+    alert(`Error ${error.message} was catched. Stack trace: ${error.stack}`);
     console.error(error, info);
     window.location.href = "/home";
   }

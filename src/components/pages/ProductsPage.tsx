@@ -1,9 +1,10 @@
-import "src/components/pages/pageWrapper.scss";
+import ProductsContent from "@/elements/ProductsContent";
+import "src/components/pages/page.scss";
 
 function ProductsPage() {
   return (
     <div className="page-wrapper">
-      <h2>Products page.</h2>
+      <ProductsContent />
     </div>
   );
 }

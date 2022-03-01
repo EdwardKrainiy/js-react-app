@@ -1,11 +1,12 @@
-import "src/components/pages/pageWrapper.scss";
+import "src/components/pages/page.scss";
+import HomePage from "@/elements/HomePageContent";
 
-function HelloPage() {
+function MainPage() {
   return (
     <div className="page-wrapper">
-      <h2>Home page.</h2>
+      <HomePage />;
     </div>
   );
 }
 
-export default HelloPage;
+export default MainPage;

@@ -26,6 +26,7 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   font-family: Vetka, sans-serif;
   font-size: 1.6vw;
@@ -36,6 +37,10 @@ nav {
 
 .active-link {
   border-bottom: 1.2vw solid #d400ff;
+}
+
+.header-nav {
+  position: relative;
 }
 
 .header-link:link {

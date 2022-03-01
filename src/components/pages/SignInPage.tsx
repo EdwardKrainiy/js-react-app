@@ -1,8 +1,6 @@
-import "src/components/pages/pageWrapper.scss";
-
 function SignInPage() {
   return (
-    <div className="page-wrapper">
+    <div>
       <h2>Sign In page.</h2>
     </div>
   );

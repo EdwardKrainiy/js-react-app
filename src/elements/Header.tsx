@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./header.scss";
+import DropDownMenu from "./DropdownMenu";
 
 function Header() {
   const getProperActiveClass = ({ isActive }: { isActive: boolean }) =>
@@ -14,9 +15,7 @@ function Header() {
         <NavLink to="/home" className={getProperActiveClass} tabIndex={0}>
           Home
         </NavLink>
-        <NavLink to="/products" className={getProperActiveClass}>
-          Products
-        </NavLink>
+        <DropDownMenu />
         <NavLink to="/about" className={getProperActiveClass}>
           About
         </NavLink>

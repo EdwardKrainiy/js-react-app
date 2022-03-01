@@ -16,15 +16,15 @@ function RoutesComponent() {
       <Router>
         <header>
           <Header />
-          <Routes>
-            <Route path={ROUTES.HOME_PAGE} element={<HomePage />} />
-            <Route path={ROUTES.PRODUCTS_PAGE} element={<ProductsPage />} />
-            <Route path={ROUTES.ABOUT_PAGE} element={<AboutPage />} />
-            <Route path={ROUTES.SIGN_IN_PAGE} element={<SignInPage />} />
-            <Route path={ROUTES.SIGN_UP_PAGE} element={<SignUpPage />} />
-            <Route path={ROUTES.OTHER_PAGE} element={<Navigate to={ROUTES.HOME_PAGE} />} />
-          </Routes>
         </header>
+        <Routes>
+          <Route path={ROUTES.HOME_PAGE} element={<HomePage />} />
+          <Route path={ROUTES.PRODUCTS_PAGE} element={<ProductsPage />} />
+          <Route path={ROUTES.ABOUT_PAGE} element={<AboutPage />} />
+          <Route path={ROUTES.SIGN_IN_PAGE} element={<SignInPage />} />
+          <Route path={ROUTES.SIGN_UP_PAGE} element={<SignUpPage />} />
+          <Route path={ROUTES.OTHER_PAGE} element={<Navigate to={ROUTES.HOME_PAGE} />} />
+        </Routes>
         <footer>
           <Footer />
         </footer>

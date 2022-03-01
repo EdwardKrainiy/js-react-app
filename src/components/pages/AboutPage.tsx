@@ -1,10 +1,6 @@
-import "src/components/pages/pageWrapper.scss";
-
 function AboutPage() {
-  throw new Error("Errop!");
-
   return (
-    <div className="page-wrapper">
+    <div>
       <h2>About page.</h2>
     </div>
   );
