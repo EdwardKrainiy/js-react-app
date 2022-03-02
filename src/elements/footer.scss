@@ -1,0 +1,41 @@
+.footer-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12vh 12vw;
+  background-color: $headerBackgroundColor;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-class {
+  margin-left: 5vw;
+  width: 3.5vw;
+  height: auto;
+  transition: transform 0.1s;
+  display: block;
+}
+
+.image-class:hover {
+  transform: scale(1.2);
+}
+
+.icons-div {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.links-div {
+  border-left: 0.2vw solid $headerFontColor;
+  width: 40%;
+}
+
+.links-div-text {
+  display: flex;
+  margin-left: 2vw;
+  font-family: Vetka, sans-serif;
+  color: $headerFontColor;
+  font-size: 1.7vw;
+}

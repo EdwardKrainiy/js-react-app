@@ -1,0 +1,62 @@
+@import url(../styles/fontface.css);
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  background-color: $headerBackgroundColor;
+}
+
+nav {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-text {
+  margin-left: 3%;
+  font-family: Typometry-Regular, sans-serif;
+  color: $headerFontColor;
+  font-size: 1.6vw;
+  font-weight: bolder;
+}
+
+.header-link {
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: Vetka, sans-serif;
+  font-size: 1.6vw;
+  font-weight: bold;
+  transition: 0.1s linear;
+  border-bottom: 1vh solid $headerFontColor;
+}
+
+.active-link {
+  border-bottom: 1.2vw solid #d400ff;
+}
+
+.header-nav {
+  position: relative;
+}
+
+.header-link:link {
+  color: $headerFontColor;
+}
+
+.header-link:visited {
+  color: $headerFontColor;
+}
+
+.header-link:hover {
+  border-bottom: 0vh solid;
+  background: #614766;
+}
+
+.header-link:active {
+  background: #60614f;
+  color: $headerFontColor;
+}
