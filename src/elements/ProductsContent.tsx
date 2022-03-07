@@ -12,17 +12,18 @@ import "../assets/images/dyingLight2GameImage.jpg";
 import "../assets/images/theBidingOfIsaacGameImage.jpg";
 import { useLocation, useSearchParams } from "react-router-dom";
 import debounce from "debounce";
+import ROUTES from "@/constants/routes";
 import GameCard from "./GameCard";
 import loadingAnim from "../assets/images/loadingAnimation.svg";
 import SearchBar from "./SearchBar";
 import IGame from "../util/IGame";
-import api from "../util/GetResponse";
+import get from "../util/GetRequest";
 
 function ProductsContent() {
   const [apiGames, setApiGames] = useState<IGame[]>([]);
 
   const initalRequest = async () => {
-    const data = await api<IGame[]>("http://localhost:3000/games");
+    const data = await get<IGame[]>("http://localhost:3000/games");
     setApiGames(data);
   };
 
@@ -53,7 +54,7 @@ function ProductsContent() {
 
   const searchAndFilterRequest = debounce(async () => {
     setIsLoading(true);
-    const games = await api<IGame[]>("http://localhost:3000/games");
+    const games = await get<IGame[]>(ROUTES.GAMES_API);
     let results: IGame[] = games;
     if (searchTerm && groupTerm) {
       results = filterGames(games);
@@ -111,7 +112,7 @@ function ProductsContent() {
           {isLoading ? (
             <img className="anim-icon" src={loadingAnim as string} alt="" />
           ) : (
-            filteredList?.map((game) => <GameCard game={game} />)
+            filteredList?.map((game) => <GameCard game={game} key={game.id} />)
           )}
         </div>
       </div>

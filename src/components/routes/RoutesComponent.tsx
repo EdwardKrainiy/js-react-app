@@ -6,9 +6,8 @@ import Footer from "@/elements/Footer";
 import ROUTES from "@/constants/routes";
 import ProductsPage from "../pages/ProductsPage";
 import AboutPage from "../pages/AboutPage";
-import SignInPage from "../pages/SignInPage";
-import SignUpPage from "../pages/SignUpPage";
 import "src/components/routes/routesComponent.scss";
+import ProfilePage from "../pages/ProfilePage";
 
 function RoutesComponent() {
   return (
@@ -21,8 +20,7 @@ function RoutesComponent() {
           <Route path={ROUTES.HOME_PAGE} element={<HomePage />} />
           <Route path={ROUTES.PRODUCTS_PAGE} element={<ProductsPage />} />
           <Route path={ROUTES.ABOUT_PAGE} element={<AboutPage />} />
-          <Route path={ROUTES.SIGN_IN_PAGE} element={<SignInPage />} />
-          <Route path={ROUTES.SIGN_UP_PAGE} element={<SignUpPage />} />
+          <Route path={ROUTES.PROFILE_PAGE} element={<ProfilePage />} />
           <Route path={ROUTES.OTHER_PAGE} element={<Navigate to={ROUTES.HOME_PAGE} />} />
         </Routes>
         <footer>

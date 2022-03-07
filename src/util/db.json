@@ -1,4 +1,21 @@
 {
+  "users": [
+    {
+      "email": "ekrayniy@inbox.ru",
+      "password": "$2a$10$QnsGeSXWKCVfGXSaQAHsD.9FAqUrSXG1g9Y5N.mxdbkLXidzqc8FG",
+      "id": 1
+    },
+    {
+      "email": "ekrayni1y@inbox.ru",
+      "password": "$2a$10$djEIXebiNVo043e1uLRtouakM5/NPzsCzHQWubtYoQuj4fCzBD30u",
+      "id": 2
+    },
+    {
+      "email": "ekrayniy3@inbox.ru",
+      "password": "$2a$10$7juuOYaZuFNe/EM2oc504O1mW8T4cKBiFvON.dDYYFSK9.ffu6xA2",
+      "id": 3
+    }
+  ],
   "games": [
     {
       "id": "1",
