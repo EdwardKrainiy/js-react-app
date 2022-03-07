@@ -1,7 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./header.scss";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useMemo } from "react";
 import setLocalStorageItem from "@/util/SetLocalStorageItem";
+import ModalWindowContext from "@/util/ModalWindowContext";
 import DropDownMenu from "./DropdownMenu";
 import ModalWindow from "./ModalWindow";
 
@@ -43,6 +44,28 @@ function Header() {
     navigate("/profile");
   };
 
+  const signInContext = useMemo(
+    () => ({
+      isModalWindowOpened: isSignInModalWindowOpened,
+      onCloseModal: closeSignInWindow,
+      modalTitle: "Sign in",
+      modalType: "sign-in",
+      setUserLogin: setLogin,
+    }),
+    [isSignInModalWindowOpened]
+  );
+
+  const signUpContext = useMemo(
+    () => ({
+      isModalWindowOpened: isSignUpModalWindowOpened,
+      onCloseModal: closeSignUpWindow,
+      modalTitle: "Sign up",
+      modalType: "sign-up",
+      setUserLogin: setLogin,
+    }),
+    [isSignUpModalWindowOpened]
+  );
+
   return (
     <div className="header-div">
       <div className="header-text">
@@ -61,32 +84,24 @@ function Header() {
             {localStorage.getItem("userLogin")}
           </div>
         ) : (
-          <div className="header-link" role="button" tabIndex={0} onMouseDown={openSignInWindow}>
-            <ModalWindow
-              isModalWindowOpened={isSignInModalWindowOpened}
-              onCloseModal={closeSignInWindow}
-              modalTitle="Sign in"
-              modalType="sign-in"
-              setUserLogin={setLogin}
-            />
-            Sign in
-          </div>
+          <ModalWindowContext.Provider value={signInContext}>
+            <div className="header-link" role="button" tabIndex={0} onMouseDown={openSignInWindow}>
+              <ModalWindow />
+              Sign in
+            </div>
+          </ModalWindowContext.Provider>
         )}
         {localStorage.getItem("accessToken") ? (
           <div className="header-link" role="button" tabIndex={0} onMouseDown={logOut}>
             Log out
           </div>
         ) : (
-          <div className="header-link" role="button" tabIndex={0} onMouseDown={openSignUpWindow}>
-            <ModalWindow
-              isModalWindowOpened={isSignUpModalWindowOpened}
-              onCloseModal={closeSignUpWindow}
-              modalTitle="Sign up"
-              modalType="sign-up"
-              setUserLogin={setLogin}
-            />
-            Sign up
-          </div>
+          <ModalWindowContext.Provider value={signUpContext}>
+            <div className="header-link" role="button" tabIndex={0} onMouseDown={openSignUpWindow}>
+              <ModalWindow />
+              Sign up
+            </div>
+          </ModalWindowContext.Provider>
         )}
       </nav>
     </div>

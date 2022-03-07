@@ -1,19 +1,12 @@
 import ReactDOM from "react-dom";
 import "src/elements/modalWindow.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import ROUTES from "@/constants/routes";
 import { useNavigate } from "react-router-dom";
+import ModalWindowContext from "@/util/ModalWindowContext";
 import closebutton from "../assets/images/close-button.png";
 import REGEX_VALUES from "../util/RegexValue";
 import post from "../util/PostRequest";
-
-interface IProps {
-  modalTitle: string;
-  onCloseModal: () => void;
-  isModalWindowOpened: boolean;
-  modalType: string;
-  setUserLogin: (login: string) => void;
-}
 
 function ModalForm({
   modalType,
@@ -182,17 +175,23 @@ function ModalForm({
   return null;
 }
 
-function WindowContent({ modalTitle, onCloseModal, isModalWindowOpened, modalType, setUserLogin }: IProps) {
-  if (isModalWindowOpened) {
+function WindowContent() {
+  const windowContext = useContext(ModalWindowContext);
+
+  if (windowContext.isModalWindowOpened) {
     return (
       <div className="modal-window-container">
         <div className="modal">
-          <div role="button" tabIndex={0} onMouseUp={onCloseModal} className="close-button-container">
+          <div role="button" tabIndex={0} onMouseUp={windowContext.onCloseModal} className="close-button-container">
             <img src={closebutton as string} alt="" className="close-button-container" />
           </div>
           <div>
-            <p className="title-text">{modalTitle}</p>
-            <ModalForm modalType={modalType} onCloseModal={onCloseModal} setUserLogin={setUserLogin} />
+            <p className="title-text">{windowContext.modalTitle}</p>
+            <ModalForm
+              modalType={windowContext.modalType}
+              onCloseModal={windowContext.onCloseModal}
+              setUserLogin={windowContext.setUserLogin}
+            />
           </div>
         </div>
       </div>
@@ -201,17 +200,8 @@ function WindowContent({ modalTitle, onCloseModal, isModalWindowOpened, modalTyp
   return null;
 }
 
-function ModalWindow({ modalTitle, onCloseModal, isModalWindowOpened, modalType, setUserLogin }: IProps) {
-  return ReactDOM.createPortal(
-    <WindowContent
-      modalTitle={modalTitle}
-      isModalWindowOpened={isModalWindowOpened}
-      onCloseModal={onCloseModal}
-      modalType={modalType}
-      setUserLogin={setUserLogin}
-    />,
-    document.getElementById("modal-window") as HTMLElement
-  );
+function ModalWindow() {
+  return ReactDOM.createPortal(<WindowContent />, document.getElementById("modal-window") as HTMLElement);
 }
 
 export default ModalWindow;
