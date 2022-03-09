@@ -2,7 +2,7 @@ import "src/components/pages/page.scss";
 import SearchBar from "@/elements/SearchBar";
 import { NavLink, useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import api from "@/util/GetResponse";
+import get from "@/util/GetRequest";
 import GameCard from "./GameCard";
 import "./homePageContent.scss";
 import IGame from "../util/IGame";
@@ -11,7 +11,7 @@ function HomePage() {
   const [apiGames, setApiGames] = useState<IGame[]>([]);
 
   const initalRequest = async () => {
-    const data = await api<IGame[]>("http://localhost:3000/games");
+    const data = await get<IGame[]>("http://localhost:3000/games");
     setApiGames(data);
   };
 
@@ -60,7 +60,7 @@ function HomePage() {
             .sort((a, b) => Date.parse(b.addingDate) - Date.parse(a.addingDate))
             ?.slice(0, 3)
             .map((game) => (
-              <GameCard game={game} />
+              <GameCard game={game} key={game.id} />
             ))}
         </div>
       </div>

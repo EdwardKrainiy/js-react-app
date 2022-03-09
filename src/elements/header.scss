@@ -33,6 +33,7 @@ nav {
   font-weight: bold;
   transition: 0.1s linear;
   border-bottom: 1vh solid $headerFontColor;
+  color: $headerFontColor;
 }
 
 .active-link {

@@ -2,8 +2,7 @@ const ROUTES = {
   HOME_PAGE: "/home",
   PRODUCTS_PAGE: "/products",
   ABOUT_PAGE: "/about",
-  SIGN_IN_PAGE: "/sign-in",
-  SIGN_UP_PAGE: "sign-up",
+  PROFILE_PAGE: "/profile",
   OTHER_PAGE: "/*",
 
   ACTIVISION_PAGE: "https://www.activision.com/",
@@ -12,6 +11,10 @@ const ROUTES = {
   SONY_PAGE: "https://www.sony.com/en/",
   EA_PAGE: "https://www.ea.com/",
   MICROSOFT_PAGE: "https://www.microsoft.com/",
+
+  GAMES_API: "http://localhost:3000/games",
+  SIGNUP_API: "http://localhost:3000/signup",
+  SIGNIN_API: "http://localhost:3000/signin",
 };
 
 export default ROUTES;
