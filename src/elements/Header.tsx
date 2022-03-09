@@ -35,9 +35,9 @@ function Header() {
     isActive ? "header-link active-link" : "header-link";
 
   const logOut = () => {
-    window.location.reload();
     localStorage.removeItem("userLogin");
     localStorage.removeItem("accessToken");
+    navigate("/home");
   };
 
   const navigateToProfilePage = () => {
